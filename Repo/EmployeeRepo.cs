@@ -13,7 +13,7 @@ namespace LearnDapper.Repo
 
         public async Task<List<Employee>> GetAll()
         {
-            string query = "SELECT * FROM tbl_employee";
+            string query = "SELECT * FROM dbo.employee";
             using (var connection = this._context.CreateConnection())
             {
                 var emplist = await connection.QueryAsync<Employee>(query);
